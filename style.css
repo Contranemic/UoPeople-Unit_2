@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #f4f4f9;
   color: #333;
-  height: auto; /* Allows dynamic height for the entire page */
-  overflow: auto; /* Ensures the page can scroll */
+  height: auto;
+  overflow: auto;
 }
 
 header {
@@ -46,15 +46,42 @@ nav {
 }
 
 #hero {
-  height: 50vh; /* Smaller height for the hero section */
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(135deg, #007BFF, #6A11CB);
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #hero h1, #hero p, #hero .btn {
+  position: relative;
+  z-index: 1;
   margin: 10px 0;
 }
 
@@ -84,6 +111,61 @@ h2 {
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials {
+  background: #f4f4f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
 }
 
 footer {
