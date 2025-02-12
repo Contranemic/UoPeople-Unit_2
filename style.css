@@ -46,21 +46,18 @@ nav {
 }
 
 #hero {
-  height: 25vh; /* Adjust to a smaller height */
+  height: 50vh; /* Adjusted height for a better screenshot view */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-#hero .btn {
-  background: #007BFF;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
+#hero h1, #hero p, #hero .btn {
+  margin: 10px 0; /* Adds space between lines */
 }
+
 
 section {
   padding: 60px 20px;
