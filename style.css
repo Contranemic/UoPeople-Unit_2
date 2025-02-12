@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #f4f4f9;
   color: #333;
-  height: 50vh; /* Reduce height to 50% of the viewport height */
-  overflow: hidden; /* Prevent scrolling */
+  height: auto; /* Allows the page to adjust its height dynamically */
+  overflow: auto; /* Enables scrolling */
 }
 
 header {
@@ -46,7 +46,7 @@ nav {
 }
 
 #hero {
-  height: 50vh; /* Adjusted height for a better screenshot view */
+  height: 50vh; /* Keep this for a smaller hero section */
   display: flex;
   flex-direction: column;
   justify-content: center;
