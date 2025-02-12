@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #f4f4f9;
   color: #333;
-  height: auto; /* Allows the page to adjust its height dynamically */
-  overflow: auto; /* Enables scrolling */
+  height: auto; /* Allows dynamic height for the entire page */
+  overflow: auto; /* Ensures the page can scroll */
 }
 
 header {
@@ -46,7 +46,7 @@ nav {
 }
 
 #hero {
-  height: 50vh; /* Keep this for a smaller hero section */
+  height: 50vh; /* Smaller height for the hero section */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,9 +55,17 @@ nav {
 }
 
 #hero h1, #hero p, #hero .btn {
-  margin: 10px 0; /* Adds space between lines */
+  margin: 10px 0;
 }
 
+#hero .btn {
+  background: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
 
 section {
   padding: 60px 20px;
